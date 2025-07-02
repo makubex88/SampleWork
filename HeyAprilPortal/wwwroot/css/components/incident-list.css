@@ -1,0 +1,8 @@
+.incident-list .list-group-item {
+    border-left-width: 5px;
+    transition: all 0.2s ease-in-out;
+}
+
+.incident-list .list-group-item:hover {
+    transform: translateX(5px);
+}

@@ -1,0 +1,20 @@
+.incident-list {
+    list-style: none;
+    padding: 0;
+}
+.incident-item {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-radius: 4px;
+    border: 1px solid #eee;
+}
+.severity-critical { background: #ffdddd; border-color: #ff0000; }
+.severity-high     { background: #fff0cc; border-color: #ff9900; }
+.severity-medium   { background: #e6f7ff; border-color: #3399ff; }
+.severity-low      { background: #eaffea; border-color: #33cc33; }
+.severity-unknown  { background: #f0f0f0; border-color: #bbb; }
+.severity {
+    font-size: 0.9em;
+    font-weight: bold;
+    float: right;
+}
