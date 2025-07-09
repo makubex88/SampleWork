@@ -1,0 +1,36 @@
+@page
+@model FullStackWorkPortal.Pages.IncidentsModel
+@{
+    ViewData["Title"] = "Incidents";
+}
+
+<h2>Incident List</h2>
+
+@if (Model.Incidents == null || Model.Incidents.Count == 0)
+{
+    <p>No incidents reported.</p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Severity</th>
+                <th>Created</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var incident in Model.Incidents)
+            {
+                <tr class="@Model.GetSeverityClass(incident.Severity)">
+                    <td>@incident.Title</td>
+                    <td>@incident.Description</td>
+                    <td>@incident.Severity</td>
+                    <td>@incident.CreatedAt.ToLocalTime().ToString("g")</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

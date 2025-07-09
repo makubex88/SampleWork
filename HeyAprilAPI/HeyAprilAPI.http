@@ -1,6 +1,0 @@
-@HeyAprilAPI_HostAddress = http://localhost:5282
-
-GET {{HeyAprilAPI_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###
